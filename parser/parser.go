@@ -1,10 +1,10 @@
 package parser
 
 import (
+	"fmt"
 	"github.com/ngiyshhk/monkey/ast"
 	"github.com/ngiyshhk/monkey/lexer"
 	"github.com/ngiyshhk/monkey/token"
-	"fmt"
 )
 
 type Parser struct {
@@ -97,6 +97,7 @@ func (p *Parser) expectPeek(t token.TokenType) bool {
 		p.nextToken()
 		return true
 	} else {
+		p.peekError(t)
 		return false
 	}
 }
