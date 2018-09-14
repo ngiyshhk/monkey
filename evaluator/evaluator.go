@@ -13,12 +13,14 @@ func Eval(node ast.Node) object.Object {
 		return Eval(node.Expression)
 	case *ast.IntegerLiteral:
 		return &object.Integer{Value: node.Value}
+	case *ast.Boolean:
+		return &object.Boolean{Value: node.Value}
 	}
 
 	return nil
 }
 
-func evalStatements(stmts []ast.Statement) object.Object{
+func evalStatements(stmts []ast.Statement) object.Object {
 	var result object.Object
 
 	for _, statement := range stmts {
