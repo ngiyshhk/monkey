@@ -309,9 +309,9 @@ func TestStringConcatenation(t *testing.T) {
 
 func TestBuiltinFunctions(t *testing.T) {
 	tests := []struct {
-		input string
+		input    string
 		expected interface{}
-	} {
+	}{
 		{`len("")`, 0},
 		{`len("four")`, 4},
 		{`len("hello world")`, 11},

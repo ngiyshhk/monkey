@@ -17,7 +17,7 @@ const (
 	ERROR_OBJ        = "ERROR"
 	FUNCTION_OBJ     = "FUNCTION"
 	STRING_OBJ       = "STRING"
-	BUILTIN_OBJ = "BUILTIN"
+	BUILTIN_OBJ      = "BUILTIN"
 )
 
 type Object interface {
@@ -98,4 +98,4 @@ type Builtin struct {
 }
 
 func (b *Builtin) Type() ObjectType { return BUILTIN_OBJ }
-func (b *Builtin) Inspect() string { return "builtin function" }
+func (b *Builtin) Inspect() string  { return "builtin function" }

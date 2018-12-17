@@ -267,11 +267,11 @@ func (sl *StringLiteral) TokenLiteral() string { return sl.Token.Literal }
 func (sl *StringLiteral) String() string       { return sl.Token.Literal }
 
 type ArrayLiteral struct {
-	Token token.Token
+	Token    token.Token
 	Elements []Expression
 }
 
-func (al *ArrayLiteral) expressionNode() {}
+func (al *ArrayLiteral) expressionNode()      {}
 func (al *ArrayLiteral) TokenLiteral() string { return al.Token.Literal }
 func (al *ArrayLiteral) String() string {
 	var out bytes.Buffer
@@ -290,11 +290,11 @@ func (al *ArrayLiteral) String() string {
 
 type IndexExpression struct {
 	Token token.Token
-	Left Expression
+	Left  Expression
 	Index Expression
 }
 
-func (ie *IndexExpression) expressionNode() {}
+func (ie *IndexExpression) expressionNode()      {}
 func (ie *IndexExpression) TokenLiteral() string { return ie.Token.Literal }
 func (ie *IndexExpression) String() string {
 	var out bytes.Buffer
