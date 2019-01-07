@@ -357,10 +357,10 @@ func TestArrayLiterals(t *testing.T) {
 }
 
 func TestArrayIndexExpressions(t *testing.T) {
-	tests := []struct{
-		input string
+	tests := []struct {
+		input    string
 		expected interface{}
-	} {
+	}{
 		{"[1, 2, 3][0]", 1},
 		{"[1, 2, 3][1]", 2},
 		{"[1, 2, 3][2]", 3},
