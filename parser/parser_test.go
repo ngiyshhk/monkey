@@ -853,9 +853,9 @@ func TestParsingHashLiteralsWithExpressions(t *testing.T) {
 	}
 
 	tests := map[string]func(ast.Expression){
-		"one":   func(e ast.Expression) { testInfixExpression(t, e, 0, "+", 1)},
-		"two":   func(e ast.Expression) { testInfixExpression(t, e, 10, "-", 8)},
-		"three": func(e ast.Expression) { testInfixExpression(t, e, 15, "/", 5)},
+		"one":   func(e ast.Expression) { testInfixExpression(t, e, 0, "+", 1) },
+		"two":   func(e ast.Expression) { testInfixExpression(t, e, 10, "-", 8) },
+		"three": func(e ast.Expression) { testInfixExpression(t, e, 15, "/", 5) },
 	}
 
 	for key, value := range hash.Pairs {
@@ -873,4 +873,3 @@ func TestParsingHashLiteralsWithExpressions(t *testing.T) {
 		testFunc(value)
 	}
 }
-
